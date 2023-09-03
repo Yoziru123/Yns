@@ -1,0 +1,14 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: se deplacer dans le serveur
+    tags: file_send
+    copy:
+     src: index.html
+     dest: /home/zkika/index.html
+     owner: zkika
+     group: youness
+     mode: 0777
